@@ -9,9 +9,6 @@ export default function ForgotCard() {
       description="Enter your email below to forgot to your account."
       isLoginPage={true}
       btnText="Forgot Password"
-      formAction={async () => {
-        "use server";
-      }}
     >
       <div className="grid gap-2">
         <Label htmlFor="email">Email</Label>

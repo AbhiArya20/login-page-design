@@ -9,9 +9,6 @@ export default function UpdatePasswordCard() {
       description="Enter your new password and confirm it to complete the password reset process."
       isLoginPage={false}
       btnText="Update Password"
-      formAction={async () => {
-        "use server";
-      }}
     >
       <div className="grid gap-2">
         <Label htmlFor="new-password">New Password</Label>

@@ -16,7 +16,6 @@ interface AuthWrapperProps {
   isLoginPage: boolean;
   btnText: string;
   children: React.ReactNode;
-  formAction: (FormData: FormData) => Promise<void>;
 }
 
 export default function AuthWrapper({
@@ -25,7 +24,6 @@ export default function AuthWrapper({
   isLoginPage,
   btnText,
   children,
-  formAction,
 }: AuthWrapperProps) {
   return (
     <Card className="mx-auto xs:max-w-sm w-full mt-16 xs:mt-0 transition-all duration-1000">
@@ -36,13 +34,7 @@ export default function AuthWrapper({
       </CardHeader>
       <CardContent>
         <div className="grid gap-4">
-          <form
-            action={async (formData: FormData) => {
-              "use server";
-              await formAction(formData);
-            }}
-            className="grid gap-4"
-          >
+          <form className="grid gap-4">
             {children}
             <Button type="submit" className="w-full font-bold">
               {btnText}

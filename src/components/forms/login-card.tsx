@@ -10,9 +10,6 @@ export default function LoginCard() {
       description="Enter your email below to login to your account."
       isLoginPage={true}
       btnText="Login"
-      formAction={async () => {
-        "use server";
-      }}
     >
       <div className="grid gap-2">
         <Label htmlFor="email">Email</Label>
