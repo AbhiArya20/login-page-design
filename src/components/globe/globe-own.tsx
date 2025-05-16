@@ -1,31 +1,30 @@
-'use client'
-import dynamic from 'next/dynamic';
-const World = dynamic(() => import('../ui/globe').then((m) => m.World), {
-  ssr: false
+import dynamic from "next/dynamic";
+const World = dynamic(() => import("../ui/globe").then((m) => m.World), {
+  ssr: false,
 });
 
 export default function GlobeOwn() {
   const globeConfig = {
     pointSize: 4,
-    globeColor: '#000000',
+    globeColor: "#000000",
     showAtmosphere: true,
-    atmosphereColor: '#ff8800',
+    atmosphereColor: "#ff8800",
     atmosphereAltitude: 0.1,
-    emissive: '#000000',
+    emissive: "#000000",
     emissiveIntensity: 0.1,
     shininess: 0.9,
-    directionalLeftLight: '#ffffff',
-    directionalTopLight: '#ffffff',
-    pointLight: '#ffffff',
+    directionalLeftLight: "#ffffff",
+    directionalTopLight: "#ffffff",
+    pointLight: "#ffffff",
     arcTime: 1000,
     arcLength: 0.9,
     rings: 3,
     maxRings: 3,
     initialPosition: { lng: 84.34952, lat: 26.2228 },
     autoRotate: true,
-    autoRotateSpeed: 0.5
+    autoRotateSpeed: 0.5,
   };
-  const colors = ['#EA580C', '#DC2626', '#E11D48', '#FACC15', '#6D28D9'];
+  const colors = ["#EA580C", "#DC2626", "#E11D48", "#FACC15", "#6D28D9"];
   const sampleArcs = [
     {
       order: 1,
@@ -34,7 +33,7 @@ export default function GlobeOwn() {
       endLat: -22.9068,
       endLng: -43.1729,
       arcAlt: 0.1,
-      color: colors[Math.floor(Math.random() * (colors.length - 1))]
+      color: colors[Math.floor(Math.random() * (colors.length - 1))],
     },
     {
       order: 1,
@@ -43,7 +42,7 @@ export default function GlobeOwn() {
       endLat: 3.139,
       endLng: 101.6869,
       arcAlt: 0.2,
-      color: colors[Math.floor(Math.random() * (colors.length - 1))]
+      color: colors[Math.floor(Math.random() * (colors.length - 1))],
     },
     {
       order: 1,
@@ -52,7 +51,7 @@ export default function GlobeOwn() {
       endLat: -1.303396,
       endLng: 36.852443,
       arcAlt: 0.2,
-      color: colors[Math.floor(Math.random() * (colors.length - 1))]
+      color: colors[Math.floor(Math.random() * (colors.length - 1))],
     },
     {
       order: 2,
@@ -61,7 +60,7 @@ export default function GlobeOwn() {
       endLat: 35.6762,
       endLng: 139.6503,
       arcAlt: 0.2,
-      color: colors[Math.floor(Math.random() * (colors.length - 1))]
+      color: colors[Math.floor(Math.random() * (colors.length - 1))],
     },
     {
       order: 2,
@@ -70,7 +69,7 @@ export default function GlobeOwn() {
       endLat: 3.139,
       endLng: 101.6869,
       arcAlt: 0.3,
-      color: colors[Math.floor(Math.random() * (colors.length - 1))]
+      color: colors[Math.floor(Math.random() * (colors.length - 1))],
     },
     {
       order: 2,
@@ -79,7 +78,7 @@ export default function GlobeOwn() {
       endLat: 36.162809,
       endLng: -115.119411,
       arcAlt: 0.3,
-      color: colors[Math.floor(Math.random() * (colors.length - 1))]
+      color: colors[Math.floor(Math.random() * (colors.length - 1))],
     },
     {
       order: 3,
@@ -88,7 +87,7 @@ export default function GlobeOwn() {
       endLat: 22.3193,
       endLng: 114.1694,
       arcAlt: 0.3,
-      color: colors[Math.floor(Math.random() * (colors.length - 1))]
+      color: colors[Math.floor(Math.random() * (colors.length - 1))],
     },
     {
       order: 3,
@@ -97,7 +96,7 @@ export default function GlobeOwn() {
       endLat: 40.7128,
       endLng: -74.006,
       arcAlt: 0.3,
-      color: colors[Math.floor(Math.random() * (colors.length - 1))]
+      color: colors[Math.floor(Math.random() * (colors.length - 1))],
     },
     {
       order: 3,
@@ -106,7 +105,7 @@ export default function GlobeOwn() {
       endLat: 51.5072,
       endLng: -0.1276,
       arcAlt: 0.3,
-      color: colors[Math.floor(Math.random() * (colors.length - 1))]
+      color: colors[Math.floor(Math.random() * (colors.length - 1))],
     },
     {
       order: 4,
@@ -115,7 +114,7 @@ export default function GlobeOwn() {
       endLat: -15.595412,
       endLng: -56.05918,
       arcAlt: 0.2,
-      color: colors[Math.floor(Math.random() * (colors.length - 1))]
+      color: colors[Math.floor(Math.random() * (colors.length - 1))],
     },
     {
       order: 4,
@@ -124,7 +123,7 @@ export default function GlobeOwn() {
       endLat: 22.3193,
       endLng: 114.1694,
       arcAlt: 0.4,
-      color: colors[Math.floor(Math.random() * (colors.length - 1))]
+      color: colors[Math.floor(Math.random() * (colors.length - 1))],
     },
     {
       order: 4,
@@ -133,7 +132,7 @@ export default function GlobeOwn() {
       endLat: 48.8566,
       endLng: -2.3522,
       arcAlt: 0.1,
-      color: colors[Math.floor(Math.random() * (colors.length - 1))]
+      color: colors[Math.floor(Math.random() * (colors.length - 1))],
     },
     {
       order: 5,
@@ -142,7 +141,7 @@ export default function GlobeOwn() {
       endLat: 51.5072,
       endLng: -0.1276,
       arcAlt: 0.3,
-      color: colors[Math.floor(Math.random() * (colors.length - 1))]
+      color: colors[Math.floor(Math.random() * (colors.length - 1))],
     },
     {
       order: 5,
@@ -151,7 +150,7 @@ export default function GlobeOwn() {
       endLat: -33.8688,
       endLng: 151.2093,
       arcAlt: 0.2,
-      color: colors[Math.floor(Math.random() * (colors.length - 1))]
+      color: colors[Math.floor(Math.random() * (colors.length - 1))],
     },
     {
       order: 5,
@@ -160,7 +159,7 @@ export default function GlobeOwn() {
       endLat: 48.8566,
       endLng: -2.3522,
       arcAlt: 0.2,
-      color: colors[Math.floor(Math.random() * (colors.length - 1))]
+      color: colors[Math.floor(Math.random() * (colors.length - 1))],
     },
     {
       order: 6,
@@ -169,7 +168,7 @@ export default function GlobeOwn() {
       endLat: 1.094136,
       endLng: -63.34546,
       arcAlt: 0.4,
-      color: colors[Math.floor(Math.random() * (colors.length - 1))]
+      color: colors[Math.floor(Math.random() * (colors.length - 1))],
     },
     {
       order: 6,
@@ -178,7 +177,7 @@ export default function GlobeOwn() {
       endLat: 35.6762,
       endLng: 139.6503,
       arcAlt: 0.1,
-      color: colors[Math.floor(Math.random() * (colors.length - 1))]
+      color: colors[Math.floor(Math.random() * (colors.length - 1))],
     },
     {
       order: 6,
@@ -187,7 +186,7 @@ export default function GlobeOwn() {
       endLat: 51.5072,
       endLng: -0.1276,
       arcAlt: 0.3,
-      color: colors[Math.floor(Math.random() * (colors.length - 1))]
+      color: colors[Math.floor(Math.random() * (colors.length - 1))],
     },
     {
       order: 7,
@@ -196,7 +195,7 @@ export default function GlobeOwn() {
       endLat: -15.595412,
       endLng: -56.05918,
       arcAlt: 0.1,
-      color: colors[Math.floor(Math.random() * (colors.length - 1))]
+      color: colors[Math.floor(Math.random() * (colors.length - 1))],
     },
     {
       order: 7,
@@ -205,7 +204,7 @@ export default function GlobeOwn() {
       endLat: 52.52,
       endLng: 13.405,
       arcAlt: 0.1,
-      color: colors[Math.floor(Math.random() * (colors.length - 1))]
+      color: colors[Math.floor(Math.random() * (colors.length - 1))],
     },
     {
       order: 7,
@@ -214,7 +213,7 @@ export default function GlobeOwn() {
       endLat: 34.0522,
       endLng: -118.2437,
       arcAlt: 0.2,
-      color: colors[Math.floor(Math.random() * (colors.length - 1))]
+      color: colors[Math.floor(Math.random() * (colors.length - 1))],
     },
     {
       order: 8,
@@ -223,7 +222,7 @@ export default function GlobeOwn() {
       endLat: -33.936138,
       endLng: 18.436529,
       arcAlt: 0.2,
-      color: colors[Math.floor(Math.random() * (colors.length - 1))]
+      color: colors[Math.floor(Math.random() * (colors.length - 1))],
     },
     {
       order: 8,
@@ -232,7 +231,7 @@ export default function GlobeOwn() {
       endLat: 52.3676,
       endLng: 4.9041,
       arcAlt: 0.2,
-      color: colors[Math.floor(Math.random() * (colors.length - 1))]
+      color: colors[Math.floor(Math.random() * (colors.length - 1))],
     },
     {
       order: 8,
@@ -241,7 +240,7 @@ export default function GlobeOwn() {
       endLat: 40.7128,
       endLng: -74.006,
       arcAlt: 0.2,
-      color: colors[Math.floor(Math.random() * (colors.length - 1))]
+      color: colors[Math.floor(Math.random() * (colors.length - 1))],
     },
     {
       order: 9,
@@ -250,7 +249,7 @@ export default function GlobeOwn() {
       endLat: 34.0522,
       endLng: -118.2437,
       arcAlt: 0.2,
-      color: colors[Math.floor(Math.random() * (colors.length - 1))]
+      color: colors[Math.floor(Math.random() * (colors.length - 1))],
     },
     {
       order: 9,
@@ -259,7 +258,7 @@ export default function GlobeOwn() {
       endLat: -22.9068,
       endLng: -43.1729,
       arcAlt: 0.4,
-      color: colors[Math.floor(Math.random() * (colors.length - 1))]
+      color: colors[Math.floor(Math.random() * (colors.length - 1))],
     },
     {
       order: 9,
@@ -268,7 +267,7 @@ export default function GlobeOwn() {
       endLat: -34.6037,
       endLng: -58.3816,
       arcAlt: 0.2,
-      color: colors[Math.floor(Math.random() * (colors.length - 1))]
+      color: colors[Math.floor(Math.random() * (colors.length - 1))],
     },
     {
       order: 10,
@@ -277,7 +276,7 @@ export default function GlobeOwn() {
       endLat: 28.6139,
       endLng: 77.209,
       arcAlt: 0.4,
-      color: colors[Math.floor(Math.random() * (colors.length - 1))]
+      color: colors[Math.floor(Math.random() * (colors.length - 1))],
     },
     {
       order: 10,
@@ -286,7 +285,7 @@ export default function GlobeOwn() {
       endLat: 31.2304,
       endLng: 121.4737,
       arcAlt: 0.3,
-      color: colors[Math.floor(Math.random() * (colors.length - 1))]
+      color: colors[Math.floor(Math.random() * (colors.length - 1))],
     },
     {
       order: 10,
@@ -295,7 +294,7 @@ export default function GlobeOwn() {
       endLat: 52.3676,
       endLng: 4.9041,
       arcAlt: 0.3,
-      color: colors[Math.floor(Math.random() * (colors.length - 1))]
+      color: colors[Math.floor(Math.random() * (colors.length - 1))],
     },
     {
       order: 11,
@@ -304,7 +303,7 @@ export default function GlobeOwn() {
       endLat: 34.0522,
       endLng: -118.2437,
       arcAlt: 0.2,
-      color: colors[Math.floor(Math.random() * (colors.length - 1))]
+      color: colors[Math.floor(Math.random() * (colors.length - 1))],
     },
     {
       order: 11,
@@ -313,7 +312,7 @@ export default function GlobeOwn() {
       endLat: 31.2304,
       endLng: 121.4737,
       arcAlt: 0.2,
-      color: colors[Math.floor(Math.random() * (colors.length - 1))]
+      color: colors[Math.floor(Math.random() * (colors.length - 1))],
     },
     {
       order: 11,
@@ -322,7 +321,7 @@ export default function GlobeOwn() {
       endLat: 1.3521,
       endLng: 103.8198,
       arcAlt: 0.2,
-      color: colors[Math.floor(Math.random() * (colors.length - 1))]
+      color: colors[Math.floor(Math.random() * (colors.length - 1))],
     },
     {
       order: 12,
@@ -331,7 +330,7 @@ export default function GlobeOwn() {
       endLat: 37.7749,
       endLng: -122.4194,
       arcAlt: 0.1,
-      color: colors[Math.floor(Math.random() * (colors.length - 1))]
+      color: colors[Math.floor(Math.random() * (colors.length - 1))],
     },
     {
       order: 12,
@@ -340,7 +339,7 @@ export default function GlobeOwn() {
       endLat: 22.3193,
       endLng: 114.1694,
       arcAlt: 0.2,
-      color: colors[Math.floor(Math.random() * (colors.length - 1))]
+      color: colors[Math.floor(Math.random() * (colors.length - 1))],
     },
     {
       order: 12,
@@ -349,7 +348,7 @@ export default function GlobeOwn() {
       endLat: 34.0522,
       endLng: -118.2437,
       arcAlt: 0.3,
-      color: colors[Math.floor(Math.random() * (colors.length - 1))]
+      color: colors[Math.floor(Math.random() * (colors.length - 1))],
     },
     {
       order: 13,
@@ -358,7 +357,7 @@ export default function GlobeOwn() {
       endLat: 22.3193,
       endLng: 114.1694,
       arcAlt: 0.3,
-      color: colors[Math.floor(Math.random() * (colors.length - 1))]
+      color: colors[Math.floor(Math.random() * (colors.length - 1))],
     },
     {
       order: 13,
@@ -367,7 +366,7 @@ export default function GlobeOwn() {
       endLat: 35.6762,
       endLng: 139.6503,
       arcAlt: 0.3,
-      color: colors[Math.floor(Math.random() * (colors.length - 1))]
+      color: colors[Math.floor(Math.random() * (colors.length - 1))],
     },
     {
       order: 13,
@@ -376,7 +375,7 @@ export default function GlobeOwn() {
       endLat: -34.6037,
       endLng: -58.3816,
       arcAlt: 0.1,
-      color: colors[Math.floor(Math.random() * (colors.length - 1))]
+      color: colors[Math.floor(Math.random() * (colors.length - 1))],
     },
     {
       order: 14,
@@ -385,7 +384,7 @@ export default function GlobeOwn() {
       endLat: 21.395643,
       endLng: 39.883798,
       arcAlt: 0.3,
-      color: colors[Math.floor(Math.random() * (colors.length - 1))]
+      color: colors[Math.floor(Math.random() * (colors.length - 1))],
     },
     {
       order: 1,
@@ -394,7 +393,7 @@ export default function GlobeOwn() {
       endLat: 19.076, // Mumbai
       endLng: 72.8777,
       arcAlt: 0.1,
-      color: colors[Math.floor(Math.random() * colors.length)]
+      color: colors[Math.floor(Math.random() * colors.length)],
     },
     {
       order: 2,
@@ -403,7 +402,7 @@ export default function GlobeOwn() {
       endLat: 12.9716, // Bengaluru
       endLng: 77.5946,
       arcAlt: 0.1,
-      color: colors[Math.floor(Math.random() * colors.length)]
+      color: colors[Math.floor(Math.random() * colors.length)],
     },
     {
       order: 3,
@@ -412,7 +411,7 @@ export default function GlobeOwn() {
       endLat: 13.0827, // Chennai
       endLng: 80.2707,
       arcAlt: 0.1,
-      color: colors[Math.floor(Math.random() * colors.length)]
+      color: colors[Math.floor(Math.random() * colors.length)],
     },
     {
       order: 4,
@@ -421,7 +420,7 @@ export default function GlobeOwn() {
       endLat: 17.385, // Hyderabad
       endLng: 78.4867,
       arcAlt: 0.1,
-      color: colors[Math.floor(Math.random() * colors.length)]
+      color: colors[Math.floor(Math.random() * colors.length)],
     },
     {
       order: 5,
@@ -430,7 +429,7 @@ export default function GlobeOwn() {
       endLat: 22.5726, // Kolkata
       endLng: 88.3639,
       arcAlt: 0.1,
-      color: colors[Math.floor(Math.random() * colors.length)]
+      color: colors[Math.floor(Math.random() * colors.length)],
     },
     {
       order: 6,
@@ -439,7 +438,7 @@ export default function GlobeOwn() {
       endLat: 28.6139, // Delhi
       endLng: 77.209,
       arcAlt: 0.1,
-      color: colors[Math.floor(Math.random() * colors.length)]
+      color: colors[Math.floor(Math.random() * colors.length)],
     },
     {
       order: 7,
@@ -448,7 +447,7 @@ export default function GlobeOwn() {
       endLat: 17.385, // Hyderabad
       endLng: 78.4867,
       arcAlt: 0.1,
-      color: colors[Math.floor(Math.random() * colors.length)]
+      color: colors[Math.floor(Math.random() * colors.length)],
     },
     {
       order: 8,
@@ -457,7 +456,7 @@ export default function GlobeOwn() {
       endLat: 19.076, // Mumbai
       endLng: 72.8777,
       arcAlt: 0.1,
-      color: colors[Math.floor(Math.random() * colors.length)]
+      color: colors[Math.floor(Math.random() * colors.length)],
     },
     {
       order: 9,
@@ -466,7 +465,7 @@ export default function GlobeOwn() {
       endLat: 12.9716, // Bengaluru
       endLng: 77.5946,
       arcAlt: 0.1,
-      color: colors[Math.floor(Math.random() * colors.length)]
+      color: colors[Math.floor(Math.random() * colors.length)],
     },
     {
       order: 10,
@@ -475,7 +474,7 @@ export default function GlobeOwn() {
       endLat: 12.9716, // Bengaluru
       endLng: 77.5946,
       arcAlt: 0.1,
-      color: colors[Math.floor(Math.random() * colors.length)]
+      color: colors[Math.floor(Math.random() * colors.length)],
     },
     {
       order: 11,
@@ -484,7 +483,7 @@ export default function GlobeOwn() {
       endLat: 13.0827, // Chennai
       endLng: 80.2707,
       arcAlt: 0.1,
-      color: colors[Math.floor(Math.random() * colors.length)]
+      color: colors[Math.floor(Math.random() * colors.length)],
     },
     {
       order: 12,
@@ -493,7 +492,7 @@ export default function GlobeOwn() {
       endLat: 28.6139, // Delhi
       endLng: 77.209,
       arcAlt: 0.1,
-      color: colors[Math.floor(Math.random() * colors.length)]
+      color: colors[Math.floor(Math.random() * colors.length)],
     },
     {
       order: 13,
@@ -502,7 +501,7 @@ export default function GlobeOwn() {
       endLat: 19.076, // Mumbai
       endLng: 72.8777,
       arcAlt: 0.1,
-      color: colors[Math.floor(Math.random() * colors.length)]
+      color: colors[Math.floor(Math.random() * colors.length)],
     },
     {
       order: 1,
@@ -511,7 +510,7 @@ export default function GlobeOwn() {
       endLat: 40.7128, // New York, USA
       endLng: -74.006,
       arcAlt: 0.1,
-      color: colors[Math.floor(Math.random() * colors.length)]
+      color: colors[Math.floor(Math.random() * colors.length)],
     },
     {
       order: 2,
@@ -520,7 +519,7 @@ export default function GlobeOwn() {
       endLat: 34.0522, // Los Angeles, USA
       endLng: -118.2437,
       arcAlt: 0.1,
-      color: colors[Math.floor(Math.random() * colors.length)]
+      color: colors[Math.floor(Math.random() * colors.length)],
     },
     {
       order: 3,
@@ -529,7 +528,7 @@ export default function GlobeOwn() {
       endLat: 48.8566, // Paris, France
       endLng: 2.3522,
       arcAlt: 0.1,
-      color: colors[Math.floor(Math.random() * colors.length)]
+      color: colors[Math.floor(Math.random() * colors.length)],
     },
     {
       order: 4,
@@ -538,7 +537,7 @@ export default function GlobeOwn() {
       endLat: 51.5074, // London, UK
       endLng: -0.1278,
       arcAlt: 0.1,
-      color: colors[Math.floor(Math.random() * colors.length)]
+      color: colors[Math.floor(Math.random() * colors.length)],
     },
     {
       order: 5,
@@ -547,7 +546,7 @@ export default function GlobeOwn() {
       endLat: 35.6895, // Tokyo, Japan
       endLng: 139.6917,
       arcAlt: 0.1,
-      color: colors[Math.floor(Math.random() * colors.length)]
+      color: colors[Math.floor(Math.random() * colors.length)],
     },
     {
       order: 6,
@@ -556,7 +555,7 @@ export default function GlobeOwn() {
       endLat: -33.8688, // Sydney, Australia
       endLng: 151.2093,
       arcAlt: 0.1,
-      color: colors[Math.floor(Math.random() * colors.length)]
+      color: colors[Math.floor(Math.random() * colors.length)],
     },
     {
       order: 7,
@@ -565,7 +564,7 @@ export default function GlobeOwn() {
       endLat: 40.7306, // New York, USA
       endLng: -73.9352,
       arcAlt: 0.1,
-      color: colors[Math.floor(Math.random() * colors.length)]
+      color: colors[Math.floor(Math.random() * colors.length)],
     },
     {
       order: 8,
@@ -574,7 +573,7 @@ export default function GlobeOwn() {
       endLat: 39.9042, // Beijing, China
       endLng: 116.4074,
       arcAlt: 0.1,
-      color: colors[Math.floor(Math.random() * colors.length)]
+      color: colors[Math.floor(Math.random() * colors.length)],
     },
     {
       order: 9,
@@ -583,7 +582,7 @@ export default function GlobeOwn() {
       endLat: 4.2105, // Manila, Philippines
       endLng: 101.9758,
       arcAlt: 0.1,
-      color: colors[Math.floor(Math.random() * colors.length)]
+      color: colors[Math.floor(Math.random() * colors.length)],
     },
     {
       order: 10,
@@ -592,7 +591,7 @@ export default function GlobeOwn() {
       endLat: 55.7558, // Moscow, Russia
       endLng: 37.6173,
       arcAlt: 0.1,
-      color: colors[Math.floor(Math.random() * colors.length)]
+      color: colors[Math.floor(Math.random() * colors.length)],
     },
     {
       order: 11,
@@ -601,7 +600,7 @@ export default function GlobeOwn() {
       endLat: 40.4168, // Madrid, Spain
       endLng: -3.7038,
       arcAlt: 0.1,
-      color: colors[Math.floor(Math.random() * colors.length)]
+      color: colors[Math.floor(Math.random() * colors.length)],
     },
     {
       order: 12,
@@ -610,7 +609,7 @@ export default function GlobeOwn() {
       endLat: -23.5505, // São Paulo, Brazil
       endLng: -46.6333,
       arcAlt: 0.1,
-      color: colors[Math.floor(Math.random() * colors.length)]
+      color: colors[Math.floor(Math.random() * colors.length)],
     },
     {
       order: 13,
@@ -619,14 +618,14 @@ export default function GlobeOwn() {
       endLat: 37.7749, // San Francisco, USA
       endLng: -122.4194,
       arcAlt: 0.1,
-      color: colors[Math.floor(Math.random() * colors.length)]
-    }
+      color: colors[Math.floor(Math.random() * colors.length)],
+    },
   ];
 
   return (
-    <div className='flex items-center justify-center h-full w-full z-20'>
-      <div className='mx-auto w-full relative h-full'>
-        <div className='w-full h-full'>
+    <div className="flex items-center justify-center h-full w-full z-20">
+      <div className="mx-auto w-full relative h-full">
+        <div className="w-full h-full">
           <World data={sampleArcs} globeConfig={globeConfig} />
         </div>
       </div>

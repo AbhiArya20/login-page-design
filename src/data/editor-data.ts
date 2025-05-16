@@ -1,5 +1,5 @@
-import { IconType } from 'react-icons/lib';
-import { SiTypescript } from 'react-icons/si';
+import { IconType } from "react-icons/lib";
+import { SiTypescript } from "react-icons/si";
 
 const initialReactCode = `import React, { useState, useEffect } from 'react';
 import axios from 'axios';
@@ -257,16 +257,16 @@ export const files: EditorValueInterface[] = [
     initialValue: initialReactCode,
     currentValue: initialReactCode,
     isDiff: false,
-    language: 'typescript',
-    fileName: 'react.tsx',
-    icon: SiTypescript
+    language: "typescript",
+    fileName: "react.tsx",
+    icon: SiTypescript,
   },
   {
     initialValue: initialNodeCode,
     currentValue: initialNodeCode,
     isDiff: false,
-    language: 'typescript',
-    fileName: 'node.ts',
-    icon: SiTypescript
-  }
+    language: "typescript",
+    fileName: "node.ts",
+    icon: SiTypescript,
+  },
 ];

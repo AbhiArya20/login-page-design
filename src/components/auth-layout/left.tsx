@@ -1,4 +1,5 @@
-"use client"
+"use client";
+
 import FeatureList from "@/components/features/feature-list";
 import { EditorComponent } from "@/components/editor/editor";
 import GlobeOwn from "@/components/globe/globe-own";

@@ -1,8 +1,8 @@
-'use client'
-import React, { useCallback, useEffect } from 'react';
-import { motion, useMotionTemplate, useMotionValue } from 'framer-motion';
 
-import { cn } from '@/lib/utils';
+import React, { useCallback, useEffect } from "react";
+import { motion, useMotionTemplate, useMotionValue } from "framer-motion";
+
+import { cn } from "@/lib/utils";
 
 export interface MagicCardProps extends React.HTMLAttributes<HTMLDivElement> {
   gradientSize?: number;
@@ -14,7 +14,7 @@ export function MagicCard({
   children,
   className,
   gradientSize = 200,
-  gradientColor = '#262626',
+  gradientColor = "#262626",
   gradientOpacity = 0.8,
 }: MagicCardProps) {
   const mouseX = useMotionValue(-gradientSize);
@@ -44,7 +44,7 @@ export function MagicCard({
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
       className={cn(
-        'group relative flex size-full overflow-hidden rounded-xl bg-neutral-100 dark:bg-neutral-900 border text-black dark:text-white',
+        "group relative flex size-full overflow-hidden rounded-xl bg-neutral-100 dark:bg-neutral-900 border text-black dark:text-white",
         className
       )}
     >

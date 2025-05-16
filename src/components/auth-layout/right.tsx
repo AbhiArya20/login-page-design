@@ -1,3 +1,4 @@
+"use client"
 import Logo from "@/components/own/logo/logo";
 import React from "react";
 import "@/components/style.css";
