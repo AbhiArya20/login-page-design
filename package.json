@@ -26,7 +26,7 @@
     "lucide-react": "^0.510.0",
     "monaco-jsx-highlighter": "^2.77.77",
     "nanoid": "^5.1.5",
-    "next": "15.4.6",
+    "next": "15.5.2",
     "next-auth": "^5.0.0-beta.20",
     "react": "^19",
     "react-dom": "^19",
